@@ -49,21 +49,33 @@
 
 
   
-<script>
+  <script>
     function data(){
-	if(font == "" || typein == ""){
-         
-         alert("Select Details Correctly");
-         
-    }
-    else{
- var display = $("#output")
- display.empty();
- document.getElementById("output").style.fontFamily = font;
- display.append("<h4 style='text-align:center'>"+typein+"</h4>");
- }
+
+     $(document).ready( function() {
+     var font = document.getElementById('font').value;
+     var typein = document.getElementById('typein').value;
+     if(font == "" || typein == ""){
+     
+     alert("Select Details Correctly");
+     
 }
-</script>
+else{
+    var display = $("#output")
+     
+          display.empty();
+          document.getElementById("output").style.fontFamily = font;
+          display.append("<h4 style='text-align:center'>"+typein+"</h4>");
+    
+       
+
+}
+    });
+
+
+    
+    }
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>   
 </body>
 </html>
